@@ -3,5 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "okmttdhr",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "deploy": "npx serverless deploy --stage",
+    "deploy:development": "yarn deploy development",
+    "deploy:staging": "yarn deploy staging",
+    "deploy:production": "yarn deploy production",
+    "deploy:list": "npx serverless deploy list --stage"
+  },
+  "dependencies": {
+    "npx": "^9.6.0",
+    "serverless": "^1.22.0"
+  }
 }
