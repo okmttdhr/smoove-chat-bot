@@ -104,6 +104,9 @@ functions:
 #       Description: "Description for the output"
 #       Value: "Some output value"
 
+plugins:
+  - serverless-webpack
+
 custom:
   profiles:
     development: serverless-smoove-chat-bot

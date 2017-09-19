@@ -4,8 +4,6 @@ var https = require('https');
 
 module.exports.hello = (event, context, callback) => {
   console.log('event', event);
-  console.log('event.body', event.body);
-  console.log('event.body.events', event.body.events);
   var b = JSON.parse(event.body);
   console.log('b', b);
   var message = b.events[0].message.text;

@@ -9,10 +9,19 @@
     "deploy:development": "yarn deploy development",
     "deploy:staging": "yarn deploy staging",
     "deploy:production": "yarn deploy production",
-    "deploy:list": "npx serverless deploy list --stage"
+    "deploy:list": "npx serverless deploy list --stage",
+    "invoke:local": "npx serverless invoke local --stage development --function",
   },
   "dependencies": {
-    "npx": "^9.6.0",
     "serverless": "^1.22.0"
+  },
+  "devDependencies": {
+    "npx": "^9.6.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "serverless-webpack": "^3.0.0",
+    "webpack": "^3.6.0",
+    "webpack-node-externals": "^1.6.0"
   }
 }
