@@ -39,5 +39,4 @@ module.exports.hello = (event, context, callback) => {
   });
   req.write(data);
   req.end();
-
 };

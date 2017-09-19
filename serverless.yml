@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: okp-bot
+service: smoove-chat-bot
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -106,6 +106,6 @@ functions:
 
 custom:
   profiles:
-    development: serverless-okp-bot
-    staging: serverless-okp-bot
-    production: serverless-okp-bot
+    development: serverless-smoove-chat-bot
+    staging: serverless-smoove-chat-bot
+    production: serverless-smoove-chat-bot

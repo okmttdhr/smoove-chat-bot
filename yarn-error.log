@@ -15,7 +15,7 @@ Platform:
 
 npm manifest: 
   {
-    "name": "okp-bot",
+    "name": "smoove-chat-bot",
     "version": "1.0.0",
     "main": "index.js",
     "author": "okmttdhr",
@@ -36,7 +36,7 @@ Lockfile:
   No lockfile
 
 Trace: 
-  SyntaxError: /Users/prop/github/okp-bot/package.json: Unexpected token } in JSON at position 397
+  SyntaxError: /Users/prop/github/smoove-chat-bot/package.json: Unexpected token } in JSON at position 397
       at Object.parse (native)
       at /usr/local/Cellar/yarn/0.27.5/libexec/lib/yarn-cli.js:747:57
       at next (native)
