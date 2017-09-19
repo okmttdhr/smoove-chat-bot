@@ -22,6 +22,7 @@ module.exports.hello = (event: any) => {
     path: '/v2/bot/message/reply',
     headers: {
       'Content-type': 'application/json',
+      Authorization: `Bearer ${(process.env.LINE_CHANNEL_ACCESS_TOKEN: any)}`,
     },
     method: 'POST',
   };
