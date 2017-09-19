@@ -1,13 +1,13 @@
-'use strict';
+// @flow
 
 var https = require('https');
 
-module.exports.hello = (event, context, callback) => {
+module.exports.hello = (event: any, context: any, callback: any) => {
   console.log('event', event);
   var b = JSON.parse(event.body);
   console.log('b', b);
-  var message = b.events[0].message.text;
-  var replyToken = b.events[0].replyToken;
+  var message: string = b.events[0].message.text;
+  var replyToken: string = b.events[0].replyToken;
   var data = JSON.stringify({
     replyToken: replyToken,
     messages: [
