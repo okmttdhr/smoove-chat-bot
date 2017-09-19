@@ -1,36 +1,35 @@
 // @flow
 
-var https = require('https');
+const https = require('https');
 
-module.exports.hello = (event: any, context: any, callback: any) => {
+module.exports.hello = (event: any) => {
   console.log('event', event);
-  var b = JSON.parse(event.body);
+  const b = JSON.parse(event.body);
   console.log('b', b);
-  var message: string = b.events[0].message.text;
-  var replyToken: string = b.events[0].replyToken;
-  var data = JSON.stringify({
-    replyToken: replyToken,
+  const message: string = b.events[0].message.text;
+  const replyToken: string = b.events[0].replyToken;
+  const data = JSON.stringify({
+    replyToken,
     messages: [
       {
         type: 'text',
         text: message,
       },
     ],
-  })
-  var opts = {
+  });
+  const opts = {
     host: 'api.line.me',
     path: '/v2/bot/message/reply',
     headers: {
-      "Content-type": "application/json",
-      "Authorization": "Bearer"
+      'Content-type': 'application/json',
     },
     method: 'POST',
   };
-  var req = https.request(opts, function(res){
-    res.on('data', function (chunk) {
+  const req = https.request(opts, (res) => {
+    res.on('data', (chunk) => {
       console.log(res.statusCode + chunk.toString());
     });
-    req.on('error', function(err) {
+    req.on('error', (err) => {
       console.log('https.request error', err);
       console.log('https.request error', err.message);
     });
